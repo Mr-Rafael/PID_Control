@@ -29,6 +29,7 @@
     // set initial background:
     fondo();
     textBox();
+    buttons();
   }
 
   void draw () {
@@ -43,6 +44,7 @@
       xPos = 30;
       fondo();
       textBox();
+      buttons();
     } else {
       xPos++;
     }
@@ -141,4 +143,27 @@ void keyReleased() {
     }
   }
   textBox();
+}
+
+void buttons() {
+  stroke(0,0,0);
+  fill(100,150,0);
+  beginShape();
+  vertex(50,150);
+  vertex(550,150);
+  vertex(550,220);
+  vertex(50,220);
+  endShape(CLOSE);
+  textSize(40);
+  fill(200,0,0);
+  beginShape();
+  vertex(650,150);
+  vertex(1150,150);
+  vertex(1150,220);
+  vertex(650,220);
+  endShape(CLOSE);
+  fill(255,255,255);
+  text("Cambiar Parámetros",100,200);
+  text("Detener",820,200);
+  
 }
