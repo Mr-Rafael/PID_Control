@@ -1,4 +1,6 @@
   import processing.serial.*;
+  
+  
 
   Serial myPort;        // The serial port
   int xPos = 30;         // horizontal position of the graph
@@ -6,8 +8,8 @@
 
   void setup () {
     size(1200, 600);
-    inByte[0] = 100;
-    inByte[1] = 120;
+    inByte[0] = 1;
+    inByte[1] = 10;
     inByte[2] = 254;
     
     //myPort = new Serial(this, Serial.list()[0], 9600);
@@ -19,11 +21,11 @@
 
   void draw () {
     stroke(100,255,0);
-    point(xPos,570 - inByte[0]);
+    point(xPos,550 - inByte[0]);
     stroke(0,255,255);
-    point(xPos,570 - inByte[1]);
+    point(xPos,550 - inByte[1]);
     stroke(255,255,255);
-    point(xPos,570 - inByte[2]);
+    point(xPos,550 - inByte[2]);
 
     if (xPos >= width-30) {
       xPos = 30;
@@ -44,5 +46,5 @@
     vertex(30,height - 30);
     endShape(CLOSE);
     stroke(255,255,255);
-    line(30,443,width - 30, 443);
+    line(30,420,width - 30, 420);
   }
