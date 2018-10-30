@@ -128,6 +128,14 @@ void mouseReleased() {
         activeText[i] = false;
       }
     }
+    
+    if(mouseX < 550 && mouseX > 50 && mouseY > 150 && mouseY < 220) {
+      println("Enviado: ", values[0], ":", values[1], ":", values[2], ":", values[3]);
+      // seriales ya tu sabe
+    }
+    if(mouseX < 1160 && mouseX > 650 && mouseY > 150 && mouseY < 220) {
+      println("Enviado: ", "STAHP");
+    }
     textBox();
 }
 
